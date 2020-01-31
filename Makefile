@@ -5,7 +5,6 @@ uninstall:
 
 clean:
 	rm -rf build dist
-	py3clean .
 	find . -name '*.pyc' -exec rm \{\} \;
 
 deps:
@@ -45,7 +44,8 @@ venv:
 	source kids/bin/activate
 
 extension: build
-	python -m pip install ../openfisca_nsw_base/
+	#python -m pip install ../openfisca_nsw_base/
+	python -m pip install openfisca_nsw_base
 	pip install -e .
 	openfisca test openfisca-nsw-rules-kids-vouchers/tests --country-package openfisca_nsw_base --extensions openfisca-nsw-rules-kids-vouchers
 
