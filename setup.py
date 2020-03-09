@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="openfisca-nsw-rules-kids-vouchers",
+    name="openfisca_nsw_rules_kids_vouchers",
     version="1.3.2",
     author="OpenFisca Team",
     author_email = 'sara.falamaki@customerservice.nsw.gov.au',
@@ -19,10 +19,9 @@ setup(
     url = "https://github.com/Openfisca-NSW/openfisca_nsw_rules_kids_vouchers",
     include_package_data = True,  # Will read MANIFEST.in
     data_files = [
-        ("share/openfisca/openfisca-nsw-rules-kids-vouchers", ["CHANGELOG.md", "LICENSE", "README.md"]),
+        ("share/openfisca/openfisca_nsw_rules_kids_vouchers", ["CHANGELOG.md", "LICENSE", "README.md"]),
         ],
     install_requires = [
-        'OpenFisca-Core >= 25.3, < 35',
         'OpenFisca_nsw_base'
 
         ],
