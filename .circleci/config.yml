@@ -75,7 +75,7 @@ jobs:
           name: Upload a Python package to Pypi
           command: |
             source /tmp/venv/extension_template/bin/activate
-            twine upload dist/* --username $PYPI_USERNAME --password $PYPI_PASSWORD
+            twine upload dist/* --username asgharkazi --password $PYPI_PASSWORD
 
       - run:
           name: Publish a git tag
