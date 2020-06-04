@@ -36,16 +36,10 @@ check-style:
 	@# `make` needs `$$` to output `$`. Ref: http://stackoverflow.com/questions/2382764.
 	flake8 `git ls-files | grep "\.py$$"`
 
-test: build check-syntax-errors check-style
-	openfisca test openfisca_nsw_rules_kids_vouchers/tests --country-package openfisca_nsw_base --extensions openfisca_nsw_rules_kids_vouchers
+test: extension
 
-venv:
-	python3.7 -m venv kids
-	source kids/bin/activate
-
-extension: build
+extension: check-syntax-errors check-style build
 	#python -m pip install ../openfisca_nsw_base/
 	python -m pip install openfisca_nsw_base
 	pip install -e .
 	openfisca test openfisca_nsw_rules_kids_vouchers/tests --country-package openfisca_nsw_base --extensions openfisca_nsw_rules_kids_vouchers
-
