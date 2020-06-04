@@ -14,7 +14,8 @@ install: deps
 	@# Install OpenFisca-Extension-Template for development.
 	@# `make install` installs the editable version of OpenFisca-France.
 	@# This allows contributors to test as they code.
-	pip install --editable .[dev] --upgrade
+	pip install -r requirements.txt
+	#pip install --editable .[dev] --upgrade
 
 build: clean deps
 	@# Install OpenFisca-Extension-Template for deployment and publishing.
